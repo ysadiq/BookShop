@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     let viewModel = ViewModel()
 
     override func viewDidLoad() {
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
 
         registerCells()
         initViewModel()
+        addRefreshController()
     }
 
     func registerCells() {
@@ -27,8 +29,22 @@ class ViewController: UIViewController {
         tableView.register(nibShimmerCell, forCellReuseIdentifier: .shimmerCellReuseId)
     }
 
+    func addRefreshController() {
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+
+    }
+
+    @objc func refreshData(_ sender: Any) {
+        viewModel.allBooks = []
+        viewModel.fetchBooks()
+    }
+
     func initViewModel() {
         viewModel.updateLoadingStatus = { [unowned self] in
+            if self.viewModel.state == .populated {
+                self.refreshControl.endRefreshing()
+            }
             self.tableView.reloadData()
         }
 
