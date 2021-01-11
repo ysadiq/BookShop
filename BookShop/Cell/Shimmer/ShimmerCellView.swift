@@ -9,7 +9,11 @@
 import UIKit
 
 class ShimmerCellView: UITableViewCell {
+    @IBOutlet var shimmerViews: [ShimmerView]!
+
     func startShimmer() {
-        
+        shimmerViews.forEach { shimmerView in
+            shimmerView.startAnimation()
+        }
     }
 }

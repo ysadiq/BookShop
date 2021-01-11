@@ -9,5 +9,5 @@
 import Foundation
 
 extension Int {
-    static var numberOfShimmeringCells = 4
+    static var numberOfShimmeringCells = 5
 }

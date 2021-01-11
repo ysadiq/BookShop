@@ -12,6 +12,9 @@
 		7683271225AB9FBE00FFD278 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271125AB9FBE00FFD278 /* UIView+IBInspectable.swift */; };
 		7683271425AC43AB00FFD278 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271325AC43AB00FFD278 /* ViewModel.swift */; };
 		7683271625AC597B00FFD278 /* IntHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271525AC597B00FFD278 /* IntHelper.swift */; };
+		7683271925AC627400FFD278 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7683271825AC627400FFD278 /* color.xcassets */; };
+		7683271B25AC664100FFD278 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271A25AC664100FFD278 /* ColorHelper.swift */; };
+		7683271D25AC665B00FFD278 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271C25AC665B00FFD278 /* ShimmerView.swift */; };
 		769142A425AB75C800007D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142A325AB75C800007D5F /* AppDelegate.swift */; };
 		769142A825AB75C800007D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142A725AB75C800007D5F /* ViewController.swift */; };
 		769142AB25AB75C800007D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769142A925AB75C800007D5F /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		7683271125AB9FBE00FFD278 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		7683271325AC43AB00FFD278 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7683271525AC597B00FFD278 /* IntHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntHelper.swift; sourceTree = "<group>"; };
+		7683271825AC627400FFD278 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
+		7683271A25AC664100FFD278 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		7683271C25AC665B00FFD278 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		769142A025AB75C800007D5F /* BookShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769142A325AB75C800007D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		769142A725AB75C800007D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 				7683270A25AB9DF000FFD278 /* StringHelper.swift */,
 				7683271125AB9FBE00FFD278 /* UIView+IBInspectable.swift */,
 				7683271525AC597B00FFD278 /* IntHelper.swift */,
+				7683271A25AC664100FFD278 /* ColorHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 				7683270E25AB9E5000FFD278 /* Storyboard */,
 				7683270C25AB9E1B00FFD278 /* AppDelegate */,
 				769142AC25AB75CC00007D5F /* Assets.xcassets */,
+				7683271825AC627400FFD278 /* color.xcassets */,
 				769142B125AB75CC00007D5F /* Info.plist */,
 			);
 			path = BookShop;
@@ -146,6 +154,7 @@
 			children = (
 				769142C525AB8A3E00007D5F /* ShimmerCellView.swift */,
 				7683270825AB9D8000FFD278 /* ShimmerCellView.xib */,
+				7683271C25AC665B00FFD278 /* ShimmerView.swift */,
 			);
 			path = Shimmer;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7683270925AB9D8000FFD278 /* ShimmerCellView.xib in Resources */,
+				7683271925AC627400FFD278 /* color.xcassets in Resources */,
 				769142B025AB75CC00007D5F /* LaunchScreen.storyboard in Resources */,
 				769142AD25AB75CC00007D5F /* Assets.xcassets in Resources */,
 				769142BE25AB86F700007D5F /* DataCellView.xib in Resources */,
@@ -223,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7683271D25AC665B00FFD278 /* ShimmerView.swift in Sources */,
 				7683271425AC43AB00FFD278 /* ViewModel.swift in Sources */,
 				769142C025AB888400007D5F /* DataCellView.swift in Sources */,
 				769142BA25AB760700007D5F /* Book.swift in Sources */,
@@ -230,6 +241,7 @@
 				769142A825AB75C800007D5F /* ViewController.swift in Sources */,
 				7683270B25AB9DF000FFD278 /* StringHelper.swift in Sources */,
 				769142A425AB75C800007D5F /* AppDelegate.swift in Sources */,
+				7683271B25AC664100FFD278 /* ColorHelper.swift in Sources */,
 				7683271625AC597B00FFD278 /* IntHelper.swift in Sources */,
 				769142C625AB8A3E00007D5F /* ShimmerCellView.swift in Sources */,
 				7683271225AB9FBE00FFD278 /* UIView+IBInspectable.swift in Sources */,
