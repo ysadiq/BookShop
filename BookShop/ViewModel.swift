@@ -27,7 +27,7 @@ class ViewModel {
                 let book = Book(title: "Dialogue with an atheist",
                                 thumbnail: UIImage(named: "DWAA"),
                                 author: author,
-                                description: "Who created the Creator, that God you talk about?’ ‘If God preordained my deeds, why should He judge me?’ ‘Why did God create Evil?")
+                                description: "Series of imaginary conversations to guide the believer in their task of helping those seemingly deprived of faith in God, His Message, and His Messenger.")
 
                 author.books.append(book)
                 self.allBooks.append(book)

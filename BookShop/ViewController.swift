@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         registerCells()
-        initViewModel()
         addRefreshController()
+        initViewModel()
     }
 
     func registerCells() {
@@ -35,11 +35,6 @@ class ViewController: UIViewController {
 
     }
 
-    @objc func refreshData(_ sender: Any) {
-        viewModel.allBooks = []
-        viewModel.fetchBooks()
-    }
-
     func initViewModel() {
         viewModel.updateLoadingStatus = { [unowned self] in
             if self.viewModel.state == .populated {
@@ -48,6 +43,11 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
 
+        viewModel.fetchBooks()
+    }
+
+    @objc func refreshData(_ sender: Any) {
+        viewModel.allBooks = []
         viewModel.fetchBooks()
     }
 }
@@ -71,6 +71,4 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
     }
-
-
 }
