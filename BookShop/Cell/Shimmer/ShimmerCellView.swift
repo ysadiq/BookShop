@@ -13,7 +13,11 @@ class ShimmerCellView: UITableViewCell {
 
     func startShimmer() {
         shimmerViews.forEach { shimmerView in
-            shimmerView.startAnimation()
+            shimmerView.start()
         }
+    }
+
+    func stopShimmer() {
+        removeFromSuperview()
     }
 }
