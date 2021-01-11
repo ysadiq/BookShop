@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		7683270925AB9D8000FFD278 /* ShimmerCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7683270825AB9D8000FFD278 /* ShimmerCellView.xib */; };
 		7683270B25AB9DF000FFD278 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683270A25AB9DF000FFD278 /* StringHelper.swift */; };
-		7683271225AB9FBE00FFD278 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271125AB9FBE00FFD278 /* File.swift */; };
+		7683271225AB9FBE00FFD278 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271125AB9FBE00FFD278 /* UIView+IBInspectable.swift */; };
+		7683271425AC43AB00FFD278 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271325AC43AB00FFD278 /* ViewModel.swift */; };
+		7683271625AC597B00FFD278 /* IntHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7683271525AC597B00FFD278 /* IntHelper.swift */; };
 		769142A425AB75C800007D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142A325AB75C800007D5F /* AppDelegate.swift */; };
 		769142A825AB75C800007D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142A725AB75C800007D5F /* ViewController.swift */; };
 		769142AB25AB75C800007D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769142A925AB75C800007D5F /* Main.storyboard */; };
@@ -17,7 +19,6 @@
 		769142B025AB75CC00007D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769142AE25AB75CC00007D5F /* LaunchScreen.storyboard */; };
 		769142B825AB760100007D5F /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142B725AB760100007D5F /* Author.swift */; };
 		769142BA25AB760700007D5F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142B925AB760700007D5F /* Book.swift */; };
-		769142BC25AB773B00007D5F /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142BB25AB773B00007D5F /* Editor.swift */; };
 		769142BE25AB86F700007D5F /* DataCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 769142BD25AB86F700007D5F /* DataCellView.xib */; };
 		769142C025AB888400007D5F /* DataCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142BF25AB888400007D5F /* DataCellView.swift */; };
 		769142C625AB8A3E00007D5F /* ShimmerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142C525AB8A3E00007D5F /* ShimmerCellView.swift */; };
@@ -26,7 +27,9 @@
 /* Begin PBXFileReference section */
 		7683270825AB9D8000FFD278 /* ShimmerCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShimmerCellView.xib; sourceTree = "<group>"; };
 		7683270A25AB9DF000FFD278 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
-		7683271125AB9FBE00FFD278 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		7683271125AB9FBE00FFD278 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		7683271325AC43AB00FFD278 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7683271525AC597B00FFD278 /* IntHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntHelper.swift; sourceTree = "<group>"; };
 		769142A025AB75C800007D5F /* BookShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769142A325AB75C800007D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		769142A725AB75C800007D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		769142B125AB75CC00007D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769142B725AB760100007D5F /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		769142B925AB760700007D5F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		769142BB25AB773B00007D5F /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
 		769142BD25AB86F700007D5F /* DataCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCellView.xib; sourceTree = "<group>"; };
 		769142BF25AB888400007D5F /* DataCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellView.swift; sourceTree = "<group>"; };
 		769142C525AB8A3E00007D5F /* ShimmerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCellView.swift; sourceTree = "<group>"; };
@@ -65,7 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				7683270A25AB9DF000FFD278 /* StringHelper.swift */,
-				7683271125AB9FBE00FFD278 /* File.swift */,
+				7683271125AB9FBE00FFD278 /* UIView+IBInspectable.swift */,
+				7683271525AC597B00FFD278 /* IntHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -99,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				769142A725AB75C800007D5F /* ViewController.swift */,
+				7683271325AC43AB00FFD278 /* ViewModel.swift */,
 				769142C225AB889B00007D5F /* Model */,
 				769142C125AB888E00007D5F /* Cell */,
 				7683270D25AB9E3600FFD278 /* Helper */,
@@ -124,7 +128,6 @@
 			children = (
 				769142B725AB760100007D5F /* Author.swift */,
 				769142B925AB760700007D5F /* Book.swift */,
-				769142BB25AB773B00007D5F /* Editor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,15 +223,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7683271425AC43AB00FFD278 /* ViewModel.swift in Sources */,
 				769142C025AB888400007D5F /* DataCellView.swift in Sources */,
 				769142BA25AB760700007D5F /* Book.swift in Sources */,
 				769142B825AB760100007D5F /* Author.swift in Sources */,
 				769142A825AB75C800007D5F /* ViewController.swift in Sources */,
 				7683270B25AB9DF000FFD278 /* StringHelper.swift in Sources */,
 				769142A425AB75C800007D5F /* AppDelegate.swift in Sources */,
+				7683271625AC597B00FFD278 /* IntHelper.swift in Sources */,
 				769142C625AB8A3E00007D5F /* ShimmerCellView.swift in Sources */,
-				7683271225AB9FBE00FFD278 /* File.swift in Sources */,
-				769142BC25AB773B00007D5F /* Editor.swift in Sources */,
+				7683271225AB9FBE00FFD278 /* UIView+IBInspectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

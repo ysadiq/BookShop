@@ -83,6 +83,12 @@
                     </userDefinedRuntimeAttribute>
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="authorName" destination="D57-VF-KmE" id="C7U-Vn-Yvs"/>
+                <outlet property="coverImageView" destination="AlX-M2-FTs" id="uco-OF-EoN"/>
+                <outlet property="desc" destination="HVY-U4-Ibd" id="S0W-PU-RcQ"/>
+                <outlet property="title" destination="zn8-1r-Qrn" id="x0l-a0-6Qf"/>
+            </connections>
             <point key="canvasLocation" x="101.44927536231884" y="118.86160714285714"/>
         </tableViewCell>
     </objects>

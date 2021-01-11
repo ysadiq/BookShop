@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+    let viewModel = ViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         registerCells()
+        initViewModel()
     }
 
     func registerCells() {
@@ -24,31 +26,34 @@ class ViewController: UIViewController {
         tableView.register(nibCell, forCellReuseIdentifier: .dataCellReuseId)
         tableView.register(nibShimmerCell, forCellReuseIdentifier: .shimmerCellReuseId)
     }
+
+    func initViewModel() {
+        viewModel.updateLoadingStatus = { [unowned self] in
+            self.tableView.reloadData()
+        }
+
+        viewModel.fetchBooks()
+    }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        viewModel.allBooks.isEmpty ? .numberOfShimmeringCells : viewModel.allBooks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let shimmerCell = tableView.dequeueReusableCell(withIdentifier: .shimmerCellReuseId,
                                                         for: indexPath) as? ShimmerCellView
-        if 1 == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
-                                                           for: indexPath) as? DataCellView else {
-                    return DataCellView()
-            }
-
-            cell.setup(with: Book(title: "", author: Author(name: "")))
-
-            return cell
-        } else {
+        if viewModel.allBooks.isEmpty {
             shimmerCell?.startShimmer()
             return shimmerCell ?? ShimmerCellView()
-        }
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
+                                                           for: indexPath) as? DataCellView else { return DataCellView() }
 
-        return UITableViewCell()
+            cell.setup(with: viewModel.allBooks[indexPath.row])
+            return cell
+        }
     }
 
 

@@ -9,7 +9,15 @@
 import UIKit
 
 class DataCellView: UITableViewCell {
-    func setup(with book: Book) {
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var desc: UILabel!
 
+    func setup(with book: Book) {
+        title.text = book.title
+        desc.text = book.description
+        coverImageView.image = book.thumbnail
+        authorName.text = book.author.name
     }
 }
