@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShimmerCell" rowHeight="193" id="y26-HW-2D4" customClass="ShimmerCellView" customModule="BookShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="193"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y26-HW-2D4" id="64l-7A-FsM">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="193"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Gqb-tY-Aw9">
+                        <rect key="frame" x="17" y="17" width="432" height="159"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWx-iB-utx" customClass="ShimmerView" customModule="BookShop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="159"/>
+                                <color key="backgroundColor" name="ShimmerViewEdge"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FOq-SJ-jja"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-YV-kRT" userLabel="title + author + desc">
+                                <rect key="frame" x="123" y="0.0" width="309" height="159"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9ne-SA-S0h" userLabel="title + author">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="59"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB4-Pf-Z7f" customClass="ShimmerView" customModule="BookShop" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="27"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-LT-Ca1" customClass="ShimmerView" customModule="BookShop" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="34" width="180" height="25"/>
+                                                <color key="backgroundColor" name="ShimmerViewEdge"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="RNy-8U-yGY"/>
+                                                    <constraint firstAttribute="height" constant="25" id="seK-MF-ck4"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-oi-A8E" customClass="ShimmerView" customModule="BookShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="79" width="309" height="80"/>
+                                        <color key="backgroundColor" name="ShimmerViewEdge"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7dv-ck-7uF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="K8l-oi-A8E" secondAttribute="trailing" id="f2f-ZH-gQj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gqb-tY-Aw9" firstAttribute="top" secondItem="64l-7A-FsM" secondAttribute="top" constant="17" id="7oV-Nf-zKV"/>
+                    <constraint firstAttribute="trailing" secondItem="Gqb-tY-Aw9" secondAttribute="trailing" constant="17" id="A7A-IV-F3J"/>
+                    <constraint firstAttribute="bottom" secondItem="Gqb-tY-Aw9" secondAttribute="bottom" constant="17" id="cWf-kw-HI0"/>
+                    <constraint firstItem="Gqb-tY-Aw9" firstAttribute="leading" secondItem="64l-7A-FsM" secondAttribute="leading" constant="17" id="tDK-bN-PX4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outletCollection property="shimmerViews" destination="cWx-iB-utx" collectionClass="NSMutableArray" id="2ct-yU-fR9"/>
+                <outletCollection property="shimmerViews" destination="TB4-Pf-Z7f" collectionClass="NSMutableArray" id="XwN-r6-mJF"/>
+                <outletCollection property="shimmerViews" destination="9gQ-LT-Ca1" collectionClass="NSMutableArray" id="aBf-At-JPJ"/>
+                <outletCollection property="shimmerViews" destination="K8l-oi-A8E" collectionClass="NSMutableArray" id="i7L-Ei-R2y"/>
+            </connections>
+            <point key="canvasLocation" x="101.44927536231884" y="118.86160714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="ShimmerViewEdge">
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
