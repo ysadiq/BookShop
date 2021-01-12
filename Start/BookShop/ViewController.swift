@@ -66,7 +66,6 @@ extension ViewController: UITableViewDataSource {
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
                                                            for: indexPath) as? DataCellView else { return DataCellView() }
-            shimmerCell?.stopShimmer()
             cell.setup(with: viewModel.allBooks[indexPath.row])
             return cell
         }

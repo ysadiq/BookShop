@@ -16,8 +16,4 @@ class ShimmerCellView: UITableViewCell {
             shimmerView.start()
         }
     }
-
-    func stopShimmer() {
-        removeFromSuperview()
-    }
 }
