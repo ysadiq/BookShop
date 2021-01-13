@@ -6,7 +6,7 @@
 //  Copyright © 2021 Yahya Saddiq. All rights reserved.
 //
 
-struct Author {
+class Author {
     let name: String
     var books: [Book] = []
 

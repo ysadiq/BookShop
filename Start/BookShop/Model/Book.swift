@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Book {
+class Book {
     let title: String
     let thumbnail: UIImage?
     let author: Author
