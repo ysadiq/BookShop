@@ -64,10 +64,10 @@ extension ViewController: UITableViewDataSource {
             shimmerCell?.startShimmer()
             return shimmerCell ?? UITableViewCell()
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
+            let dataCell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
                                                      for: indexPath) as? DataCellView
-            cell?.setup(with: viewModel.allBooks[indexPath.row])
-            return cell ?? UITableViewCell()
+            dataCell?.setup(with: viewModel.allBooks[indexPath.row])
+            return dataCell ?? UITableViewCell()
         }
     }
 }
