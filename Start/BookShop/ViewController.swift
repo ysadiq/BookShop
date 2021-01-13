@@ -62,12 +62,12 @@ extension ViewController: UITableViewDataSource {
                                                         for: indexPath) as? ShimmerCellView
         if viewModel.allBooks.isEmpty {
             shimmerCell?.startShimmer()
-            return shimmerCell ?? ShimmerCellView()
+            return shimmerCell ?? UITableViewCell()
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
-                                                           for: indexPath) as? DataCellView else { return DataCellView() }
-            cell.setup(with: viewModel.allBooks[indexPath.row])
-            return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
+                                                     for: indexPath) as? DataCellView
+            cell?.setup(with: viewModel.allBooks[indexPath.row])
+            return cell ?? UITableViewCell()
         }
     }
 }
