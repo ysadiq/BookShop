@@ -11,13 +11,7 @@ import UIKit
 class ShimmerCellView: UITableViewCell {
     @IBOutlet var shimmerViews: [ShimmerView]!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        startShimmer()
-    }
-
-    private func startShimmer() {
+    func startShimmer() {
         shimmerViews.forEach { shimmerView in
             shimmerView.start()
         }
