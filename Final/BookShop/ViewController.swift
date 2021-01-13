@@ -59,13 +59,14 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let shimmerCell = tableView.dequeueReusableCell(withIdentifier: .shimmerCellReuseId,
-                                                        for: indexPath)
+                                                        for: indexPath) as? ShimmerCellView
         if viewModel.allBooks.isEmpty {
-            return shimmerCell
+            shimmerCell?.startShimmer()
+            return shimmerCell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: .dataCellReuseId,
                                                      for: indexPath) as? DataCellView
-            (shimmerCell as? ShimmerCellView)?.stopShimmer()
+            shimmerCell?.stopShimmer()
             cell?.setup(with: viewModel.allBooks[indexPath.row])
             return cell ?? UITableViewCell()
         }
