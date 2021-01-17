@@ -42,7 +42,8 @@ public class Editor {
     public var books: [Book] = []
 
     public init(name: String) {
-        self.name = name }
+        self.name = name
+    }
 
     deinit {
         print("Editor instance Deinitialized (\(name))!")
