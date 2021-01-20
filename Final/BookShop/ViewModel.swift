@@ -22,8 +22,8 @@ class ViewModel {
         state = .loading
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
-            for _ in 0..<6 {
-                var author = Author(name: "Mustafa Mahmoud")
+            for _ in 0..<Int.numberOfShimmeringCells {
+                let author = Author(name: "Mustafa Mahmoud")
                 let book = Book(title: "Dialogue with an atheist",
                                 thumbnail: UIImage(named: "DWAA"),
                                 author: author,
