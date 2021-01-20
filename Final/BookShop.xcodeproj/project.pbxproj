@@ -25,6 +25,7 @@
 		769142BE25AB86F700007D5F /* DataCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 769142BD25AB86F700007D5F /* DataCellView.xib */; };
 		769142C025AB888400007D5F /* DataCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142BF25AB888400007D5F /* DataCellView.swift */; };
 		769142C625AB8A3E00007D5F /* ShimmerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769142C525AB8A3E00007D5F /* ShimmerCellView.swift */; };
+		76F7F7FA25B60B6E00442430 /* ViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7F7F925B60B6E00442430 /* ViewController+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		769142BD25AB86F700007D5F /* DataCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCellView.xib; sourceTree = "<group>"; };
 		769142BF25AB888400007D5F /* DataCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellView.swift; sourceTree = "<group>"; };
 		769142C525AB8A3E00007D5F /* ShimmerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCellView.swift; sourceTree = "<group>"; };
+		76F7F7F925B60B6E00442430 /* ViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				769142A725AB75C800007D5F /* ViewController.swift */,
+				76F7F7F925B60B6E00442430 /* ViewController+Helper.swift */,
 				7683271325AC43AB00FFD278 /* ViewModel.swift */,
 				769142C225AB889B00007D5F /* Model */,
 				769142C125AB888E00007D5F /* Cell */,
@@ -245,6 +248,7 @@
 				7683271625AC597B00FFD278 /* IntHelper.swift in Sources */,
 				769142C625AB8A3E00007D5F /* ShimmerCellView.swift in Sources */,
 				7683271225AB9FBE00FFD278 /* UIView+IBInspectable.swift in Sources */,
+				76F7F7FA25B60B6E00442430 /* ViewController+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
