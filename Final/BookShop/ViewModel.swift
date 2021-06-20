@@ -10,6 +10,8 @@ import UIKit
 
 class ViewModel {
     var allBooks: [Book] = []
+    var allAuthors: [Author] = []
+
     var state: State = .empty {
         didSet {
             self.updateLoadingStatus?()
@@ -21,6 +23,9 @@ class ViewModel {
     func fetchBooks() {
         state = .loading
 
+        allBooks.removeAll()
+        allAuthors.removeAll()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             guard let self = self else {
                 return
