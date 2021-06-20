@@ -21,7 +21,11 @@ class ViewModel {
     func fetchBooks() {
         state = .loading
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
             for _ in 0..<Int.numberOfShimmeringCells {
                 let author = Author(name: "Mustafa Mahmoud")
                 let book = Book(title: "Dialogue with an atheist",
@@ -30,7 +34,9 @@ class ViewModel {
                                 description: "Series of imaginary conversations to guide the believer in their task of helping those seemingly deprived of faith in God, His Message, and His Messenger.")
 
                 author.books.append(book)
+
                 self.allBooks.append(book)
+                self.allAuthors.append(author)
             }
 
             self.state = .populated

@@ -24,7 +24,11 @@ extension ViewController {
     }
 
     func initViewModel() {
-        viewModel.updateLoadingStatus = { [unowned self] in
+        viewModel.updateLoadingStatus = { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
             if self.viewModel.state == .populated {
                 self.refreshControl.endRefreshing()
             }
