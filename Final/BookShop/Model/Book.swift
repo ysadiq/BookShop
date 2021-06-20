@@ -20,4 +20,8 @@ class Book {
         self.thumbnail = thumbnail
         self.description = description
     }
+
+    deinit {
+        print("\(title) will deallocate")
+    }
 }
